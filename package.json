@@ -1,0 +1,41 @@
+{
+  "name": "kylian-gachet-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.15.0 <25"
+  },
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1",
+    "postinstall": "nuxt prepare",
+    "generate": "nuxt generate && node scripts/finalize.mjs",
+    "build": "npm run generate",
+    "preview": "node scripts/preview.mjs",
+    "typecheck": "nuxt typecheck",
+    "lint": "eslint . --max-warnings=0",
+    "check:output": "node scripts/check-output.mjs",
+    "test": "playwright test",
+    "format": "prettier --write app scripts shared tests *.ts *.mjs *.json public/*.js .github",
+    "format:check": "prettier --check app scripts shared tests *.ts *.mjs *.json public/*.js .github",
+    "audit:review": "node scripts/audit.mjs"
+  },
+  "dependencies": {
+    "nuxt": "4.6.2",
+    "vue": "3.5.44"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.10.2",
+    "@playwright/test": "1.56.1",
+    "@types/node": "24.10.0",
+    "eslint": "10.13.0",
+    "eslint-plugin-vue": "10.11.1",
+    "prettier": "3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.71.2",
+    "vue-tsc": "3.3.13"
+  },
+  "allowScripts": {
+    "esbuild": false
+  }
+}
