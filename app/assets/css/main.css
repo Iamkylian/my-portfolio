@@ -175,7 +175,7 @@ main:focus {
   scroll-margin-top: 105px;
 }
 .container {
-  width: min(1200px, calc(100% - 96px));
+  width: min(clamp(1200px, 80vw, 1480px), calc(100% - 96px));
   margin-inline: auto;
 }
 .accent {
@@ -1091,17 +1091,6 @@ main:focus {
   max-width: 600px;
 }
 
-@media (min-width: 1500px) {
-  .hero {
-    padding-top: 95px;
-  }
-  .hero h1 {
-    font-size: 70px;
-  }
-  .hero-bottom {
-    margin-top: 80px;
-  }
-}
 @media (max-width: 1100px) {
   .container {
     width: calc(100% - 64px);
@@ -1843,4 +1832,93 @@ main:focus {
 }
 .language-picker-menu[open] .language-options {
   display: grid;
+}
+
+/* Wide desktops: expand the layout and keep secondary text readable. */
+@media screen and (min-width: 1500px) {
+  .hero {
+    padding-top: clamp(56px, 7vh, 80px);
+  }
+  .hero h1 {
+    font-size: clamp(70px, 4vw, 80px);
+  }
+  .hero-role {
+    font-size: clamp(43px, 2.5vw, 50px);
+    max-width: 760px;
+  }
+  .hero-description {
+    font-size: 18px;
+    max-width: 52ch;
+    line-height: 1.75;
+  }
+  .hero-bottom {
+    margin-top: 48px;
+    font-size: 11px;
+  }
+  .wordmark {
+    font-size: 16px;
+  }
+  .wordmark-sub {
+    font-size: 10px;
+  }
+  .navigation a,
+  .social-links a {
+    font-size: 14px;
+  }
+  .language-picker,
+  .copy-button {
+    font-size: 13px;
+  }
+  .button,
+  .text-link {
+    font-size: 15px;
+  }
+  .eyebrow,
+  .project-meta,
+  .timeline-date,
+  .current-label,
+  .tags li {
+    font-size: 11px;
+  }
+  .section-heading h2,
+  .contact-inner h2 {
+    font-size: 42px;
+  }
+  .expertise-intro > p:last-child,
+  .journey-intro > p:not(.eyebrow),
+  .contact-intro,
+  .section-description,
+  .experience-card > p,
+  .interest-grid p,
+  .language-note p {
+    font-size: 16px;
+    max-width: 55ch;
+  }
+  .project-card p,
+  .catalog-grid .project-card p,
+  .expertise-list p,
+  .timeline p,
+  .qualification-grid p,
+  .experience-points {
+    font-size: 15px;
+  }
+  .expertise-list a,
+  .timeline .timeline-place,
+  .qualification-org {
+    font-size: 13px;
+  }
+  .timeline h3,
+  .expertise-list h3,
+  .qualification-grid h3 {
+    font-size: 22px;
+  }
+  .email-link {
+    font-size: 32px;
+  }
+  .site-footer {
+    font-size: 12px;
+  }
+  .project-prose {
+    max-width: 80ch;
+  }
 }

@@ -118,7 +118,7 @@ for (const theme of ['light', 'dark'] as const) {
   }
 }
 
-for (const width of [320, 390, 768, 1440]) {
+for (const width of [320, 390, 768, 1440, 1920, 2560]) {
   test(`no horizontal overflow at ${width}px`, async ({ page }) => {
     await page.setViewportSize({ width, height: 900 })
     for (const route of ['./', './projets/', './parcours/', './projets/bastion/']) {
