@@ -11,3 +11,7 @@ playwright-report/
 .DS_Store
 
 dist
+
+# Local working documents; keep out of the public repository.
+/docs/
+/README.md

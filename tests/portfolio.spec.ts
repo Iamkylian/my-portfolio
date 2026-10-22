@@ -90,7 +90,7 @@ test('email copy succeeds and fails gracefully', async ({ page, context }) => {
   await page.goto('./#contact')
   await page.getByRole('button', { name: 'Copier l’adresse email' }).click()
   await expect(page.getByRole('button', { name: 'Adresse copiée' })).toBeVisible()
-  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('kyliangachet@proton.me')
+  expect(await page.evaluate(() => navigator.clipboard.readText())).toBe('contact@example.com')
   await page.evaluate(() => {
     navigator.clipboard.writeText = () => Promise.reject(new Error('Denied'))
   })
@@ -182,7 +182,7 @@ test('core content and routes work without JavaScript', async ({ browser, baseUR
 test('current profile comes from the supplied CV, without old applications', async ({ page }) => {
   await page.goto('./')
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Kylian Gachet')
-  await expect(page.locator('a[href="mailto:kyliangachet@proton.me"]')).toBeVisible()
+  await expect(page.locator('a[href="mailto:contact@example.com"]')).toBeVisible()
   await expect(page.locator('body')).not.toContainText('Penser leur sécurité')
   await page.goto('./parcours/')
   await expect(page.locator('body')).toContainText('Université de Reims')

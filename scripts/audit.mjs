@@ -2,7 +2,7 @@ import { spawnSync } from 'node:child_process'
 import { mkdir, readFile, writeFile } from 'node:fs/promises'
 
 // Reviewed build-tool exceptions, never a claim of zero vulnerabilities.
-// See docs/AUDIT.md. Reassess within one month or fail closed.
+// Reassess within one month or fail closed.
 const exceptions = new Map([
   ['https://github.com/advisories/GHSA-vfj7-8cjw-p6xm', { name: 'braces', version: '3.0.3' }],
   ['https://github.com/advisories/GHSA-86w9-cpqp-85rv', { name: 'node-forge', version: '1.4.0' }],

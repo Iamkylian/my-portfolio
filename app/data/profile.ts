@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Kylian Gachet',
-  email: 'kyliangachet@proton.me',
+  email: 'contact@example.com',
   github: 'https://github.com/Iamkylian',
   linkedin: 'https://www.linkedin.com/in/kyliangachet/',
 }
