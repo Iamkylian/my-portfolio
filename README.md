@@ -156,3 +156,5 @@ Dans `app/app.config.ts`, modifier `heroIllustration` :
 - `'network'` : illustration réseau d’origine, conservée dans `NetworkArt.vue`.
 
 Le choix s’applique aux deux langues et aux deux thèmes. Relancer la génération pour mettre à jour la version statique. L’illustration décorative est un SVG local, sans texte, dont les couleurs suivent le thème.
+
+Retry deployment
