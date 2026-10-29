@@ -32,7 +32,7 @@
     "eslint-plugin-vue": "10.11.1",
     "prettier": "3.9.10",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.71.2",
+    "typescript-eslint": "8.72.0",
     "vue-tsc": "3.3.13"
   },
   "allowScripts": {
